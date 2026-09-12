@@ -48,8 +48,8 @@ def show_results(students):
     passed = 0
     failed = 0
     for student in students:
-            name = students["name"]
-            score = students["score"]
+            name = student["name"]
+            score = student["score"]
             grade = get_grade(score)
             feedback = get_feedback(score)
             result = "Pass" if score >= 60 else "Fail"
@@ -89,7 +89,7 @@ def main():
         print("2 - Add new student")
         print("3 - Save and quit")
 
-        choice = input("\nEnter 1, 2 or 3!")
+        choice = int(input("\nEnter 1, 2 or 3!: "))
 
         if choice == 1:
             show_results(students)
