@@ -40,7 +40,7 @@ def load_students():
 def save_students(students):
     with open(file_path, "w") as file:
         json.dump(students, file, indent=4)
-    print("Data saved'")
+    print("Data saved")
 
 def show_results(students):
     print("\n CLASS RESULTS")
